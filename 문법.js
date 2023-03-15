@@ -30,3 +30,9 @@ console.log(result);  // 7
 sub = (n1, n2) => n1 - n2;
 result = sub(3, 2);
 console.log(result);    //1
+
+square = (num) => {
+    return num*num;
+}
+
+result = square(3);
