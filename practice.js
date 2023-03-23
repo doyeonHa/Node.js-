@@ -13,5 +13,5 @@ const server = http.createServer(function(req, res) {
 });
 
 server.listen(port, function() {
-    console.log(`lisyen`);
+    console.log(`listen`);
 });
