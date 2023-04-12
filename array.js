@@ -9,6 +9,10 @@ arr.forEach(function(data, index) {
 const cherryIndex = arr.findIndex(data => data === 'cherry')
 // console.log(cherryIndex);
 
+// 3번 index부터 'cherry'에 해당하는 idx를 찾음, 없으면 -1
+const a = arr.indexOf('cherry', 0);
+console.log(a);
+
 // 배열 끝부분에 data 추가
 arr.push('grape');
 console.log(arr);
