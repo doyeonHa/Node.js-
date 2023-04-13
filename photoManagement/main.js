@@ -21,5 +21,25 @@ function getAllFiles(dirPath, arrOfFiles) {
   return arrOfFiles;
 }
 
-const files = getAllFiles(__dirname + "\\base", []);
-console.log(files.join('\n'));
+function getDuplicated(baseDir) {
+  // 디렉토리가 존재하는지 유효성 검사
+  if (!fs.existsSync(baseDir)) {
+    console.log('폴더가 존재하지 않음');
+    return;
+  }
+
+  const duplicatedDir = path.join(baseDir, 'duplicated');
+  if (!fs.existsSync(duplicatedDir))
+    fs.mkdirSync(duplicatedDir);
+
+    // base폴더에 있는 모든 파일들 list
+    const arrOfFiles = getAllFiles(baseDir, []);
+
+    // 중복된 파일들(절대경로)list
+    const duplicatedFiles = [];
+}
+
+// const files = getAllFiles(path.join(__dirname, 'base'), []);
+// console.log(arraayOfFiles.join('\n'));
+
+getDuplicated(path.join(__dirname, 'base'));
