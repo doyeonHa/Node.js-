@@ -2,7 +2,6 @@
 const files = fs.readdirSync(__dirname);
 console.log(files);
 
-
 // \\ : \
 // 특정파일의 전체(절대)경로
 // result = __dirname + '\\' + files[1]
@@ -14,7 +13,11 @@ console.log(path.basename(result)); // path.basename() 파일명만 추출
 
 const copiedFile = path.join(__dirname, '복사한파일.js')
 fs.copyFileSync(result, copiedFile); // 파일 복사
-fs.unlinkSync(copiedFile); // 파일 삭제
+
+const renamedFile = path.join(__dirname, '변경한 파일.js');
+fs.renameSync(copiedFile, renamedFile); // 파일 이름 바꾸기
+
+// fs.unlinkSync(copiedFile); // 파일 삭제
 
 /// 해당 파일에 대한 정보를 알 수 있음
 console.log(fs.statSync(result).isFile());      // true
