@@ -1,0 +1,17 @@
+{
+  "name": "nodeee",
+  "version": "1.0.0",
+  "description": "Node.js 수업",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9"
+  }
+}
+
+package.json에서 
+"dependencies" 속성
