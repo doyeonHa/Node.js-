@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= food %></title>
+    <title>음식</title>
 </head>
 <body>
-    <h1><%= like %>하는 <%= food %></h1>
+    <h1>좋아하는 음식</h1>
     <ul>
-        <li><%= drink %></li>
-        <li>케이크</li>
-        <li>ㅇㅇ</li>
+        <% food.forEach(function (e) { %>
+            <li><%= e %></li>
+        <% }); %>
     </ul>
 </body>
 </html>
