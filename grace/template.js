@@ -9,6 +9,12 @@ const index = {
   here: '미림'
 };
 
+const food = {
+  food: '음식',
+  drink: '요거트 스무디',
+  like: '좋아'
+}
+
 const server = http.createServer(function(req, res) {
   console.log(req.url);
   // 초기값 설정
@@ -19,7 +25,9 @@ const server = http.createServer(function(req, res) {
     {name: index.name, here: index.here})
     .then((data) => res.end(data)); // 데이터를 넘겨받은 ejs코드(data)를 클라이언트에게 보낸다.
   } else if(req.url === '/food') {
-    fs.createReadStream(path.join(__dirname, 'html', 'food.html')).pipe(res);
+    ejs.renderFile(path.join(__dirname, 'template', 'food.ejs'),
+    {food: food.food, drink: food.drink, like: food.like})
+    .then((data) => res.end(data));
   } else {
     fs.createReadStream(path.join(__dirname, 'html', '404.html')).pipe(res);
   }
