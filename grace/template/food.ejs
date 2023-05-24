@@ -9,9 +9,14 @@
 <body>
     <h1>좋아하는 음식</h1>
     <ul>
+        <!-- food는 배열 -->
+        <!-- <li> <%= food[0] %> </li>
+        <li> <%= food[1] %> </li>
+        <li> <%= food[2] %> </li> -->
+
         <% food.forEach(function (e) { %>
             <li><%= e %></li>
-        <% }); %>
+        <% }); %> <!-- 단순 JS코드를 넣을때에는 =빼기 -->
     </ul>
 </body>
 </html>
